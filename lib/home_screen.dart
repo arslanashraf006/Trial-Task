@@ -187,15 +187,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  Slider(
-                    min: 0.0,
-                    max: 100.0,
-                    value: 10,
-                    activeColor: Colors.green,
-                    thumbColor: Colors.transparent,
-                    onChanged: (value) {
+                  SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                        thumbColor: Colors.transparent,
+                        thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 0.0)
+                    ),
+                    child: Slider(
+                      min: 0.0,
+                      max: 100.0,
+                      value: 10,
+                      activeColor: Colors.green,
+                      onChanged: (value) {
 
-                    },
+                      },
+                    ),
                   ),
 
                   Padding(
@@ -232,14 +237,20 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  Slider(
-                    min: 0.0,
-                    max: 100.0,
-                    value: 10,
-                    activeColor: Colors.orange,
-                    onChanged: (value) {
+                  SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      thumbColor: Colors.transparent,
+                        thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 0.0)
+                    ),
+                    child: Slider(
+                      min: 0.0,
+                      max: 100.0,
+                      value: 10,
+                      activeColor: Colors.orange,
+                      onChanged: (value) {
 
-                    },
+                      },
+                    ),
                   ),
                 ],
               ),
